@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-use Core\Classes\Application;
+use Core\Classes\Illuminate\Application;
 use Illuminate\Support\ServiceProvider;
 
 class BaseServiceProvider extends ServiceProvider

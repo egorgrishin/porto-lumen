@@ -1,6 +1,6 @@
 <?php
 
-use Core\Classes\Application;
+use Core\Classes\Illuminate\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
 use Core\Providers\RouteServiceProvider;

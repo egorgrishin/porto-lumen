@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Classes;
+namespace Core\Classes\Illuminate;
 
 use Laravel\Lumen\Application as LumenApplication;
 use Laravel\Lumen\Routing\Router;
