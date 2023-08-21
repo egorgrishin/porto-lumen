@@ -2,8 +2,8 @@
 
 namespace Core\Providers;
 
-use App\Models\User;
 use Illuminate\Support\ServiceProvider;
+use Sections\User\User\Models\User;
 
 class AuthServiceProvider extends ServiceProvider
 {

@@ -3,6 +3,7 @@
 use Core\Classes\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
+use Core\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Console\Kernel as LumenKernel;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Laravel\Lumen\Bootstrap\LoadEnvironmentVariables;
@@ -88,6 +89,7 @@ $app->configure('app');
 |
 */
 
+$app->register(RouteServiceProvider::class);
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
