@@ -1,13 +1,13 @@
 <?php
 
+use Core\Classes\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
 use Illuminate\Contracts\Console\Kernel as LumenKernel;
 use Illuminate\Contracts\Debug\ExceptionHandler;
-use Laravel\Lumen\Application;
 use Laravel\Lumen\Bootstrap\LoadEnvironmentVariables;
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 (new LoadEnvironmentVariables(
     dirname(__DIR__)
@@ -28,9 +28,8 @@ date_default_timezone_set(env('APP_TIMEZONE', 'UTC'));
 
 $app = new Application(dirname(__DIR__));
 
-// $app->withFacades();
-
-// $app->withEloquent();
+//$app->withFacades();
+//$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
