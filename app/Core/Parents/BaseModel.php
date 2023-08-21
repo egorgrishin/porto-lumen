@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-class BaseModel
+abstract class BaseModel
 {
 
 }

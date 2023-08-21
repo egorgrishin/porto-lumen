@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-class BaseTask
+abstract class BaseTask
 {
 
 }

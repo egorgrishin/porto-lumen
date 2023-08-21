@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-class BaseSubAction
+abstract class BaseSubAction
 {
 
 }

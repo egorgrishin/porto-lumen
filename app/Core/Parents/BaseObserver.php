@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-class BaseObserver
+abstract class BaseObserver
 {
 
 }

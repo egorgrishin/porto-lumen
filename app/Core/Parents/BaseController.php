@@ -2,7 +2,7 @@
 
 namespace Core\Parents;
 
-class BaseController
+abstract class BaseController
 {
 
 }
