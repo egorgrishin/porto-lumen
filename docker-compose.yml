@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+    lumen:
+      ports:
+          - "80:80"
+      build: .
+      volumes:
+          - .:/var/www/html
+          - /var/www/html/vendor/
+      command: php -S lumen:80 -t public
+      restart: always
