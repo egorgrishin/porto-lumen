@@ -3,4 +3,4 @@
 use Laravel\Lumen\Routing\Router;
 
 /** @var Router $router */
-$router->get('/', fn () => dd(321));
+$router->get('/', fn () => dd(config('app')));
