@@ -16,14 +16,7 @@
     "autoload": {
         "psr-4": {
             "Core\\": "app/Core/",
-            "Sections\\": "app/Sections/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
+            "Sections\\": "app/Sections/"
         }
     },
     "scripts": {
