@@ -3,6 +3,7 @@
 namespace Core\Kernels;
 
 use Core\Commands\ControllerMakeCommand;
+use Core\Commands\ModelMakeCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -13,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         ControllerMakeCommand::class,
+        ModelMakeCommand::class,
     ];
 
     /**

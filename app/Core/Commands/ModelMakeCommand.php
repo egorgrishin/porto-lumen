@@ -2,25 +2,28 @@
 
 namespace Core\Commands;
 
+use Illuminate\Console\Concerns\CreatesMatchingTest;
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;
 
-class ControllerMakeCommand extends GeneratorCommand
+class ModelMakeCommand extends GeneratorCommand
 {
+    use CreatesMatchingTest;
+
     /**
      * The console command name.
      */
-    protected $name = 'make:controller';
+    protected $name = 'make:model';
 
     /**
      * The console command description.
      */
-    protected $description = 'Create a new controller class';
+    protected $description = 'Create a new Eloquent model class';
 
     /**
      * The type of class being generated.
      */
-    protected $type = 'Controller';
+    protected $type = 'Model';
 
     /**
      * Execute the console command.
@@ -63,7 +66,7 @@ class ControllerMakeCommand extends GeneratorCommand
         foreach ([
             $section_directory = base_path("app/Sections/$section"),
             $module_directory = $section_directory . "/$module",
-            $class_directory = $module_directory . '/Controllers',
+            $class_directory = $module_directory . '/Models',
         ] as $directory) {
             if (!file_exists($directory)) {
                 $this->components->error("Directory \"$directory\" does not exist.");
@@ -96,7 +99,7 @@ class ControllerMakeCommand extends GeneratorCommand
      */
     private function getAbsolutePathToClass(string $section, string $module, string $name): string
     {
-        return base_path("app/Sections/$section/$module/Controllers/$name.php");
+        return base_path("app/Sections/$section/$module/Models/$name.php");
     }
 
     /**
@@ -115,7 +118,7 @@ class ControllerMakeCommand extends GeneratorCommand
      */
     private function getClassNamespace(string $section, string $module): string
     {
-        return "Sections\\$section\\$module\\Controllers";
+        return "Sections\\$section\\$module\\Models";
     }
 
     /**
@@ -123,7 +126,7 @@ class ControllerMakeCommand extends GeneratorCommand
      */
     protected function getStub(): string
     {
-        return base_path('app/Core/Stubs/controller.stub');
+        return base_path('app/Core/Stubs/model.stub');
     }
 
     /**
