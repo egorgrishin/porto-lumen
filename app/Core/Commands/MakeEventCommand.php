@@ -4,12 +4,12 @@ namespace Core\Commands;
 
 use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class ModelMakeCommand extends GeneratorCommand
+class MakeEventCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      */
-    protected $name = 'make:model';
+    protected $name = 'make:event';
 
     /**
      * The console command description.
@@ -19,18 +19,18 @@ class ModelMakeCommand extends GeneratorCommand
     /**
      * The type of class being generated.
      */
-    protected string $type = 'Model';
+    protected string $type = 'Event';
 
     /**
      * Name of the class directory.
      */
-    protected string $directory = 'Models';
+    protected string $directory = 'Events';
 
     /**
      * Get the stub file for the generator.
      */
     protected function getStub(): string
     {
-        return base_path('app/Core/Stubs/model.stub');
+        return base_path('app/Core/Stubs/event.stub');
     }
 }

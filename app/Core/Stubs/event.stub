@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseEvent;
+
+class {{ class }} extends BaseEvent
+{
+    /**
+     * Create a new event instance.
+     */
+    public function __construct()
+    {
+        //
+    }
+}

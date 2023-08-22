@@ -4,7 +4,7 @@ namespace Core\Commands;
 
 use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class ControllerMakeCommand extends GeneratorCommand
+class MakeControllerCommand extends GeneratorCommand
 {
     /**
      * The console command name.
