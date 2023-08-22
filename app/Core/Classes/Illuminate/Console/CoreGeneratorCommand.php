@@ -66,7 +66,7 @@ abstract class CoreGeneratorCommand extends GeneratorCommand implements PromptsF
     /**
      * Build the class with the given name.
      */
-    private function buildClass(string $name): string
+    protected function buildClass(string $name): string
     {
         $namespace = $this->getClassNamespace();
         $stub = file_get_contents($this->getStub());
