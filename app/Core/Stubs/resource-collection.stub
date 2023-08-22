@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseResourceCollection;
+
+class {{ class }} extends BaseResourceCollection
+{
+    /**
+     * Transform the resource collection into an array.
+     */
+    public function toArray($request): array
+    {
+        return parent::toArray($request);
+    }
+}

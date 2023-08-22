@@ -148,7 +148,7 @@ abstract class GeneratorCommand extends Command implements PromptsForMissingInpu
     /**
      * Get the value of a command argument.
      */
-    private function getArgument(string $key): string
+    protected function getArgument(string $key): string
     {
         return trim($this->argument($key));
     }
