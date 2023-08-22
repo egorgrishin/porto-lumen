@@ -1,0 +1,25 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseEvent;
+use Core\Parents\BaseListener;
+
+class {{ class }} extends BaseListener
+{
+    /**
+     * Create the event listener.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the event.
+     */
+    public function handle(BaseEvent $event): void
+    {
+        //
+    }
+}

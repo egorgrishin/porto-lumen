@@ -5,6 +5,7 @@ namespace Core\Kernels;
 use Core\Commands\MakeControllerCommand;
 use Core\Commands\MakeEventCommand;
 use Core\Commands\MakeJobCommand;
+use Core\Commands\MakeListenerCommand;
 use Core\Commands\MakeModelCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -19,6 +20,7 @@ class Kernel extends ConsoleKernel
         MakeEventCommand::class,
         MakeJobCommand::class,
         MakeModelCommand::class,
+        MakeListenerCommand::class,
     ];
 
     /**
