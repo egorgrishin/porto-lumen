@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseObserver;
+
+class {{ class }} extends BaseObserver
+{
+    //
+}
