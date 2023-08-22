@@ -2,11 +2,11 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\GeneratorCommand;
+use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeResourceCommand extends GeneratorCommand
+class MakeResourceCommand extends SectionGeneratorCommand
 {
     /**
      * The console command name.

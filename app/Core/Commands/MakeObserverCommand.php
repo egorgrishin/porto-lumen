@@ -2,9 +2,9 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\GeneratorCommand;
+use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
 
-class MakeObserverCommand extends GeneratorCommand
+class MakeObserverCommand extends SectionGeneratorCommand
 {
     /**
      * The console command name.
