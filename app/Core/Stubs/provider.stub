@@ -1,0 +1,24 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseServiceProvider;
+
+class {{ class }} extends BaseServiceProvider
+{
+    /**
+     * Register services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        //
+    }
+}
