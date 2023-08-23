@@ -5,6 +5,7 @@ namespace Core\Kernels;
 use Core\Commands\MakeConsoleCommand;
 use Core\Commands\MakeControllerCommand;
 use Core\Commands\MakeEventCommand;
+use Core\Commands\MakeExceptionCommand;
 use Core\Commands\MakeJobCommand;
 use Core\Commands\MakeListenerCommand;
 use Core\Commands\MakeModelCommand;
@@ -31,6 +32,7 @@ class Kernel extends ConsoleKernel
         MakeProviderCommand::class,
         MakeConsoleCommand::class,
         MakeTestCommand::class,
+        MakeExceptionCommand::class,
     ];
 
     /**

@@ -36,18 +36,13 @@ abstract class SectionGeneratorCommand extends GeneratorCommand implements Promp
             return false;
         }
 
-        foreach ([
-            $section_directory = base_path("app/Sections/$section"),
-            $module_directory = "$section_directory/$module",
-            $class_directory = "$module_directory/$this->directory",
-        ] as $directory) {
-            if (!file_exists($directory)) {
-                $this->components->error("Directory \"$directory\" does not exist.");
-                return false;
-            }
+        $directory = base_path("app/Sections/$section/$module/$this->directory");
+        if (!file_exists($directory)) {
+            $this->components->error("Directory \"$directory\" does not exist.");
+            return false;
         }
 
-        $class = $class_directory . "/$name.php";
+        $class = "$directory/$name.php";
         if (file_exists($class)) {
             $this->components->error("$this->type already exists!");
             return false;
