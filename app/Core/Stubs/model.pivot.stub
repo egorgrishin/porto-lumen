@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BasePivot;
+
+class {{ class }} extends BasePivot
+{
+    //
+}

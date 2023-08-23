@@ -3,6 +3,7 @@
 namespace Core\Commands;
 
 use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
+use Symfony\Component\Console\Input\InputOption;
 
 class MakeModelCommand extends SectionGeneratorCommand
 {
@@ -31,6 +32,19 @@ class MakeModelCommand extends SectionGeneratorCommand
      */
     protected function getStub(): string
     {
-        return base_path('app/Core/Stubs/model.stub');
+        return base_path($this->option('pivot')
+            ? 'app/Core/Stubs/model.pivot.stub'
+            : 'app/Core/Stubs/model.stub'
+        );
+    }
+
+    /**
+     * Get the console command options.
+     */
+    protected function getOptions(): array
+    {
+        return [
+            ['pivot', 'p', InputOption::VALUE_NONE, 'Indicates if the generated model should be a custom intermediate table model'],
+        ];
     }
 }
