@@ -91,7 +91,7 @@ abstract class SectionGeneratorCommand extends GeneratorCommand implements Promp
      */
     private function getClassNamespace(string $section, string $module): string
     {
-        return "Sections\\$section\\$module\\$this->directory";
+        return str_replace('/', '\\', "Sections\\$section\\$module\\$this->directory");
     }
 
     /**

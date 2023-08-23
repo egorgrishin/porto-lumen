@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseTest;
+
+class {{ class }} extends BaseTest
+{
+    //
+}

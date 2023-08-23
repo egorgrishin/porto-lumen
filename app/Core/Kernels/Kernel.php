@@ -11,6 +11,7 @@ use Core\Commands\MakeModelCommand;
 use Core\Commands\MakeObserverCommand;
 use Core\Commands\MakeProviderCommand;
 use Core\Commands\MakeResourceCommand;
+use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -29,6 +30,7 @@ class Kernel extends ConsoleKernel
         MakeResourceCommand::class,
         MakeProviderCommand::class,
         MakeConsoleCommand::class,
+        MakeTestCommand::class,
     ];
 
     /**
