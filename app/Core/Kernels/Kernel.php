@@ -13,6 +13,8 @@ use Core\Commands\MakeObserverCommand;
 use Core\Commands\MakeProviderCommand;
 use Core\Commands\MakeRequestCommand;
 use Core\Commands\MakeResourceCommand;
+use Core\Commands\MakeRuleCoreCommand;
+use Core\Commands\MakeRuleSectionCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -35,6 +37,8 @@ class Kernel extends ConsoleKernel
         MakeTestCommand::class,
         MakeExceptionCommand::class,
         MakeRequestCommand::class,
+        MakeRuleCoreCommand::class,
+        MakeRuleSectionCommand::class,
     ];
 
     /**
