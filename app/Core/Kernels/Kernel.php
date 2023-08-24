@@ -2,6 +2,7 @@
 
 namespace Core\Kernels;
 
+use Core\Commands\MakeCastCommand;
 use Core\Commands\MakeConsoleCommand;
 use Core\Commands\MakeControllerCommand;
 use Core\Commands\MakeEventCommand;
@@ -37,6 +38,7 @@ class Kernel extends ConsoleKernel
         MakeResourceCommand::class,
         MakeRuleCommand::class,
         MakeTestCommand::class,
+        MakeCastCommand::class,
     ];
 
     /**
