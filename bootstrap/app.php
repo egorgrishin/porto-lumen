@@ -3,6 +3,7 @@
 use Core\Classes\Illuminate\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
+use Core\Providers\RequestServiceProvider;
 use Core\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Console\Kernel as LumenKernel;
 use Illuminate\Contracts\Debug\ExceptionHandler;
@@ -89,6 +90,7 @@ $app->configure('app');
 |
 */
 
+$app->register(RequestServiceProvider::class);
 $app->register(RouteServiceProvider::class);
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
