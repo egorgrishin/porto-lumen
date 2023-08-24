@@ -4,12 +4,12 @@ namespace Core\Commands;
 
 use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
 
-class MakeExceptionCommand extends SectionGeneratorCommand
+class MakeExceptionSectionCommand extends SectionGeneratorCommand
 {
     /**
      * The console command name.
      */
-    protected $name = 'make:exception';
+    protected $name = 'make:exception:section';
 
     /**
      * The console command description.
