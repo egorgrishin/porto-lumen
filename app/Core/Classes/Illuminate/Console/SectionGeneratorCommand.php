@@ -38,7 +38,7 @@ abstract class SectionGeneratorCommand extends GeneratorCommand implements Promp
 
         $directory = base_path("app/Sections/$section/$module/$this->directory");
         if (!file_exists($directory)) {
-            mkdir($directory);
+            mkdir($directory, 0777, true);
         }
 
         $class = "$directory/$name.php";

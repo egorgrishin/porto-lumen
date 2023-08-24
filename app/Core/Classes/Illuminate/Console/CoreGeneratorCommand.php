@@ -32,8 +32,7 @@ abstract class CoreGeneratorCommand extends GeneratorCommand implements PromptsF
         }
 
         if (!file_exists($directory = $this->getAbsolutePathToClass())) {
-            $this->components->error("Directory \"$directory\" does not exist.");
-            return false;
+            mkdir($directory, 0777, true);
         }
 
         if (file_exists($this->getAbsolutePathToClass($name))) {
