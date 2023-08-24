@@ -11,6 +11,7 @@ use Core\Commands\MakeListenerCommand;
 use Core\Commands\MakeModelCommand;
 use Core\Commands\MakeObserverCommand;
 use Core\Commands\MakeProviderCommand;
+use Core\Commands\MakeRequestCommand;
 use Core\Commands\MakeResourceCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
@@ -33,6 +34,7 @@ class Kernel extends ConsoleKernel
         MakeConsoleCommand::class,
         MakeTestCommand::class,
         MakeExceptionCommand::class,
+        MakeRequestCommand::class,
     ];
 
     /**
