@@ -2,12 +2,15 @@
 
 namespace Core\Classes\Illuminate;
 
+use Core\Classes\Illuminate\Concerns\RoutesRequests;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Laravel\Lumen\Application as LumenApplication;
 use Laravel\Lumen\Routing\Router;
 
 class Application extends LumenApplication
 {
+    use RoutesRequests;
+
     /**
      * The Router instance.
      * @var Router
