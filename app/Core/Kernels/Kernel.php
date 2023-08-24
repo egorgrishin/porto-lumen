@@ -14,6 +14,7 @@ use Core\Commands\MakeObserverCommand;
 use Core\Commands\MakeProviderCommand;
 use Core\Commands\MakeRequestCommand;
 use Core\Commands\MakeResourceCommand;
+use Core\Commands\MakeRouteCommand;
 use Core\Commands\MakeRuleCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
@@ -39,6 +40,7 @@ class Kernel extends ConsoleKernel
         MakeRuleCommand::class,
         MakeTestCommand::class,
         MakeCastCommand::class,
+        MakeRouteCommand::class,
     ];
 
     /**
