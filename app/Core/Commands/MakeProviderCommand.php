@@ -2,9 +2,9 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\CoreGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class MakeProviderCommand extends CoreGeneratorCommand
+class MakeProviderCommand extends GeneratorCommand
 {
     /**
      * The console command name.
@@ -25,6 +25,11 @@ class MakeProviderCommand extends CoreGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Providers';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core = true;
 
     /**
      * Get the stub file for the generator.

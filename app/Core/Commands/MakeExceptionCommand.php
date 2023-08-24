@@ -2,14 +2,19 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class MakeExceptionSectionCommand extends SectionGeneratorCommand
+class MakeExceptionCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      */
-    protected $name = 'make:exception:section';
+    protected $name = 'make:exception';
+
+    /**
+     * The name and signature of the console command.
+     */
+    protected $signature = 'make:exception {name} {--core}';
 
     /**
      * The console command description.
@@ -25,6 +30,11 @@ class MakeExceptionSectionCommand extends SectionGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Exceptions';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core;
 
     /**
      * Get the stub file for the generator.

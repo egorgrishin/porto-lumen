@@ -2,11 +2,11 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeResourceCommand extends SectionGeneratorCommand
+class MakeResourceCommand extends GeneratorCommand
 {
     /**
      * The console command name.
@@ -27,6 +27,11 @@ class MakeResourceCommand extends SectionGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Resources';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core = false;
 
     /**
      * Get the stub file for the generator.

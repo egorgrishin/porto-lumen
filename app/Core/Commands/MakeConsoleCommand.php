@@ -2,14 +2,19 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\CoreGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class MakeConsoleCommand extends CoreGeneratorCommand
+class MakeConsoleCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      */
     protected $name = 'make:command';
+
+    /**
+     * The name and signature of the console command.
+     */
+    protected $signature = 'make:command {name} {--core}';
 
     /**
      * The console command description.
@@ -25,6 +30,11 @@ class MakeConsoleCommand extends CoreGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Commands';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core;
 
     /**
      * Get the stub file for the generator.

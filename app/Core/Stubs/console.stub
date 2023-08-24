@@ -2,9 +2,9 @@
 
 namespace {{ namespace }};
 
-use Illuminate\Console\Command;
+use Core\Parents\BaseCommand;
 
-class {{ class }} extends Command
+class {{ class }} extends BaseCommand
 {
     /**
      * The name and signature of the console command.

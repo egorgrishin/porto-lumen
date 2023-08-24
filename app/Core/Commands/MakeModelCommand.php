@@ -2,10 +2,10 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeModelCommand extends SectionGeneratorCommand
+class MakeModelCommand extends GeneratorCommand
 {
     /**
      * The console command name.
@@ -26,6 +26,11 @@ class MakeModelCommand extends SectionGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Models';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core = false;
 
     /**
      * Get the stub file for the generator.

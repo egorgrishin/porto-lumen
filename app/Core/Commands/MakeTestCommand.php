@@ -2,16 +2,20 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
-use Illuminate\Filesystem\Filesystem;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-class MakeTestCommand extends SectionGeneratorCommand
+class MakeTestCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      */
     protected $name = 'make:test';
+
+    /**
+     * The name and signature of the console command.
+     */
+    protected $signature = 'make:test {name} {--core}';
 
     /**
      * The console command description.
@@ -27,6 +31,11 @@ class MakeTestCommand extends SectionGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Tests';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core;
 
     /**
      * Execute the console command.

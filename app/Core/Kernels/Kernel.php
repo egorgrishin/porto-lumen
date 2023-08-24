@@ -5,8 +5,7 @@ namespace Core\Kernels;
 use Core\Commands\MakeConsoleCommand;
 use Core\Commands\MakeControllerCommand;
 use Core\Commands\MakeEventCommand;
-use Core\Commands\MakeExceptionCoreCommand;
-use Core\Commands\MakeExceptionSectionCommand;
+use Core\Commands\MakeExceptionCommand;
 use Core\Commands\MakeJobCommand;
 use Core\Commands\MakeListenerCommand;
 use Core\Commands\MakeModelCommand;
@@ -14,8 +13,7 @@ use Core\Commands\MakeObserverCommand;
 use Core\Commands\MakeProviderCommand;
 use Core\Commands\MakeRequestCommand;
 use Core\Commands\MakeResourceCommand;
-use Core\Commands\MakeRuleCoreCommand;
-use Core\Commands\MakeRuleSectionCommand;
+use Core\Commands\MakeRuleCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -26,21 +24,19 @@ class Kernel extends ConsoleKernel
      * The Artisan commands provided by your application
      */
     protected $commands = [
+        MakeConsoleCommand::class,
         MakeControllerCommand::class,
         MakeEventCommand::class,
+        MakeExceptionCommand::class,
         MakeJobCommand::class,
-        MakeModelCommand::class,
         MakeListenerCommand::class,
+        MakeModelCommand::class,
         MakeObserverCommand::class,
-        MakeResourceCommand::class,
         MakeProviderCommand::class,
-        MakeConsoleCommand::class,
-        MakeTestCommand::class,
-        MakeExceptionCoreCommand::class,
-        MakeExceptionSectionCommand::class,
         MakeRequestCommand::class,
-        MakeRuleCoreCommand::class,
-        MakeRuleSectionCommand::class,
+        MakeResourceCommand::class,
+        MakeRuleCommand::class,
+        MakeTestCommand::class,
     ];
 
     /**

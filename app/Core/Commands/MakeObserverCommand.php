@@ -2,9 +2,9 @@
 
 namespace Core\Commands;
 
-use Core\Classes\Illuminate\Console\SectionGeneratorCommand;
+use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class MakeObserverCommand extends SectionGeneratorCommand
+class MakeObserverCommand extends GeneratorCommand
 {
     /**
      * The console command name.
@@ -25,6 +25,11 @@ class MakeObserverCommand extends SectionGeneratorCommand
      * Name of the class directory.
      */
     protected string $directory = 'Observers';
+
+    /**
+     * Create a class in the core or section
+     */
+    protected bool $is_core = false;
 
     /**
      * Get the stub file for the generator.
