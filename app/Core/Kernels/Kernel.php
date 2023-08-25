@@ -16,6 +16,7 @@ use Core\Commands\MakeRequestCommand;
 use Core\Commands\MakeResourceCommand;
 use Core\Commands\MakeRouteCommand;
 use Core\Commands\MakeRuleCommand;
+use Core\Commands\MakeScopeCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -41,6 +42,7 @@ class Kernel extends ConsoleKernel
         MakeTestCommand::class,
         MakeCastCommand::class,
         MakeRouteCommand::class,
+        MakeScopeCommand::class,
     ];
 
     /**
