@@ -4,12 +4,12 @@ namespace Core\Commands;
 
 use Core\Classes\Illuminate\Console\GeneratorCommand;
 
-class MakeActionCommand extends GeneratorCommand
+class MakeSubActionCommand extends GeneratorCommand
 {
     /**
      * The console command name.
      */
-    protected $name = 'make:action';
+    protected $name = 'make:sub-action';
 
     /**
      * The console command description.
@@ -19,12 +19,12 @@ class MakeActionCommand extends GeneratorCommand
     /**
      * The type of class being generated.
      */
-    protected string $type = 'Action';
+    protected string $type = 'Sub-action';
 
     /**
      * Name of the class directory.
      */
-    protected string $directory = 'Actions';
+    protected string $directory = 'SubActions';
 
     /**
      * Create a class in the core or section
@@ -36,6 +36,6 @@ class MakeActionCommand extends GeneratorCommand
      */
     protected function getStub(): string
     {
-        return base_path('app/Core/Stubs/action.stub');
+        return base_path('app/Core/Stubs/sub-action.stub');
     }
 }
