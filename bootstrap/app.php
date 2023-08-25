@@ -93,6 +93,7 @@ $app->configure('app');
 */
 
 $app->register(AppServiceProvider::class);
+$app->register(DatabaseServiceProvider::class);
 $app->register(RequestServiceProvider::class);
 $app->register(RouteServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
