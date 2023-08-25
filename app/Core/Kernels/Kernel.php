@@ -23,6 +23,7 @@ use Core\Commands\MakeRuleCommand;
 use Core\Commands\MakeScopeCommand;
 use Core\Commands\MakeTaskCommand;
 use Core\Commands\MakeTestCommand;
+use Core\Commands\SeedCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -32,6 +33,7 @@ class Kernel extends ConsoleKernel
      * The Artisan commands provided by your application
      */
     protected $commands = [
+        SeedCommand::class,
         MakeSeederCommand::class,
         MakeMigrationCommand::class,
         MakeTaskCommand::class,
