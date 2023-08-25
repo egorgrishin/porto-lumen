@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseAction;
+
+class {{ class }} extends BaseAction
+{
+    //
+}
