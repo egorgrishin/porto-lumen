@@ -38,14 +38,4 @@ class MakeFactoryCommand extends GeneratorCommand
     {
         return base_path('app/Core/Stubs/factory.stub');
     }
-
-    /**
-     * Returns the absolute path to the file
-     */
-    protected function getAbsolutePathToClass(?string $section, ?string $module, ?string $name = null): string
-    {
-        return $this->is_core
-            ? base_path("app/Core/$this->directory" . ($name ? "/{$name}Factory.php" : ''))
-            : base_path("app/Sections/$section/$module/$this->directory" . ($name ? "/{$name}Factory.php" : ''));
-    }
 }
