@@ -15,7 +15,7 @@ class MakeTestCommand extends GeneratorCommand
     /**
      * The name and signature of the console command.
      */
-    protected $signature = 'make:test {name} {--core}';
+    protected $signature = 'make:test {name} {--unit} {--core}';
 
     /**
      * The console command description.
