@@ -151,7 +151,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Returns the names of the section and module
      */
-    private function getSectionAndModuleNames(): array
+    protected function getSectionAndModuleNames(): array
     {
         return [
             $this->ask('Section name:'),
@@ -162,7 +162,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Checks arguments for correctness
      */
-    private function validateArguments(?string $section, ?string $module, string $name): bool
+    protected function validateArguments(?string $section, ?string $module, string $name): bool
     {
         if ($this->isReservedName($name)) {
             $this->components->error("The name \"$name\" is reserved by PHP.");
@@ -186,7 +186,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Returns the absolute path to the file
      */
-    private function getAbsolutePathToClass(?string $section, ?string $module, ?string $name = null): string
+    protected function getAbsolutePathToClass(?string $section, ?string $module, ?string $name = null): string
     {
         return $this->is_core
             ? base_path("app/Core/$this->directory" . ($name ? "/$name.php" : ''))
@@ -196,7 +196,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Creates a new class file
      */
-    private function createClass(?string $section, ?string $module, string $name): void
+    protected function createClass(?string $section, ?string $module, string $name): void
     {
         file_put_contents(
             $this->getAbsolutePathToClass($section, $module, $name),
@@ -207,7 +207,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Build the class with the given name.
      */
-    private function buildClass(?string $section, ?string $module, string $name): string
+    protected function buildClass(?string $section, ?string $module, string $name): string
     {
         $namespace = $this->getClassNamespace($section, $module);
         $stub = file_get_contents($this->getStub());
@@ -218,7 +218,7 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
     /**
      * Get the full namespace for a given class, without the class name.
      */
-    private function getClassNamespace(?string $section, ?string $module): string
+    protected function getClassNamespace(?string $section, ?string $module): string
     {
         return str_replace('/', '\\', $this->is_core
             ? "Core\\$this->directory"

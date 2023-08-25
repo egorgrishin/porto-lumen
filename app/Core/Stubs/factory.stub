@@ -1,0 +1,18 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseFactory;
+
+class {{ class }}Factory extends BaseFactory
+{
+    /**
+     * Define the model's default state.
+     */
+    public function definition(): array
+    {
+        return [
+            //
+        ];
+    }
+}
