@@ -4,6 +4,7 @@ use Core\Classes\Illuminate\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
 use Core\Providers\AppServiceProvider;
+use Core\Providers\DatabaseServiceProvider;
 use Core\Providers\RequestServiceProvider;
 use Core\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Console\Kernel as LumenKernel;
