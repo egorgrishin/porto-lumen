@@ -1,0 +1,16 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseSeeder;
+
+class {{ class }} extends BaseSeeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        //
+    }
+}
