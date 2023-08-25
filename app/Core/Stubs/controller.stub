@@ -11,15 +11,7 @@ class {{ class }} extends BaseController
 //    /**
 //     * Display a listing of the resource.
 //     */
-//    public function index(Request $request): Response
-//    {
-//        //
-//    }
-
-//    /**
-//     * Store a newly created resource in storage.
-//     */
-//    public function store(Request $request): Response
+//    public function get(Request $request): Response
 //    {
 //        //
 //    }
@@ -27,7 +19,15 @@ class {{ class }} extends BaseController
 //    /**
 //     * Display the specified resource.
 //     */
-//    public function show(Request $request): Response
+//    public function find(Request $request): Response
+//    {
+//        //
+//    }
+
+//    /**
+//     * Store a newly created resource in storage.
+//     */
+//    public function create(Request $request): Response
 //    {
 //        //
 //    }
@@ -43,7 +43,7 @@ class {{ class }} extends BaseController
 //    /**
 //     * Remove the specified resource from storage.
 //     */
-//    public function destroy(Request $request): Response
+//    public function delete(Request $request): Response
 //    {
 //        //
 //    }
