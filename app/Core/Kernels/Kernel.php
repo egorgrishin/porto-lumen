@@ -2,6 +2,7 @@
 
 namespace Core\Kernels;
 
+use Core\Commands\MakeActionCommand;
 use Core\Commands\MakeSubActionCommand;
 use Core\Commands\MakeCastCommand;
 use Core\Commands\MakeConsoleCommand;
@@ -29,6 +30,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         MakeSubActionCommand::class,
+        MakeActionCommand::class,
         MakeConsoleCommand::class,
         MakeControllerCommand::class,
         MakeEventCommand::class,
