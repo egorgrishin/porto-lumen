@@ -19,6 +19,7 @@ use Core\Commands\MakeResourceCommand;
 use Core\Commands\MakeRouteCommand;
 use Core\Commands\MakeRuleCommand;
 use Core\Commands\MakeScopeCommand;
+use Core\Commands\MakeTaskCommand;
 use Core\Commands\MakeTestCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -29,6 +30,7 @@ class Kernel extends ConsoleKernel
      * The Artisan commands provided by your application
      */
     protected $commands = [
+        MakeTaskCommand::class,
         MakeSubActionCommand::class,
         MakeActionCommand::class,
         MakeConsoleCommand::class,

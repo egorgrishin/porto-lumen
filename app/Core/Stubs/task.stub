@@ -1,0 +1,10 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Parents\BaseTask;
+
+class {{ class }} extends BaseTask
+{
+    //
+}
