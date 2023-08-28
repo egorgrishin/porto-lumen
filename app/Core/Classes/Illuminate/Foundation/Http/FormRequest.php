@@ -2,6 +2,7 @@
 
 namespace Core\Classes\Illuminate\Foundation\Http;
 
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Auth\Access\Response;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Container\Container;
@@ -44,7 +45,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
      */
     protected function getValidatorInstance(): Validator
     {
-        if ($this->validator) {
+        if (isset($this->validator)) {
             return $this->validator;
         }
 
@@ -127,7 +128,7 @@ class FormRequest extends Request implements ValidatesWhenResolved
      */
     protected function failedAuthorization()
     {
-        throw new UnauthorizedException;
+        throw new HttpException(403, 'Unauthorized');
     }
 
     /**
@@ -146,6 +147,15 @@ class FormRequest extends Request implements ValidatesWhenResolved
     public function validated(array|int|string|null $key = null, mixed $default = null): mixed
     {
         return data_get($this->validator->validated(), $key, $default);
+    }
+
+    /**
+     * Get the route handling the request.
+     */
+    public function route($param = null, $default = null): mixed
+    {
+        $parameters = call_user_func($this->getRouteResolver())[2];
+        return array_key_exists($param, $parameters) ? $parameters[$param] : $default;
     }
 
     /**
