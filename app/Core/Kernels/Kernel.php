@@ -5,6 +5,7 @@ namespace Core\Kernels;
 use Core\Commands\MakeActionCommand;
 use Core\Commands\MakeDtoCommand;
 use Core\Commands\MakeFactoryCommand;
+use Core\Commands\MakeMiddlewareCommand;
 use Core\Commands\MakeMigrationCommand;
 use Core\Commands\MakeSeederCommand;
 use Core\Commands\MakeSubActionCommand;
@@ -35,6 +36,7 @@ class Kernel extends ConsoleKernel
      * The Artisan commands provided by your application
      */
     protected $commands = [
+        MakeMiddlewareCommand::class,
         MakeDtoCommand::class,
         MakeFactoryCommand::class,
         SeedCommand::class,
