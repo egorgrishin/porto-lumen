@@ -3,12 +3,15 @@
 namespace Sections\User\Admin\Models;
 
 use Core\Classes\Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Sections\User\Admin\Data\Factories\AdminFactory;
 use Sections\User\Role\Models\Role;
 use Sections\User\User\Models\User;
 
 class Admin extends User
 {
+    use HasFactory;
+
     /**
      * The table associated with the model.
      */
