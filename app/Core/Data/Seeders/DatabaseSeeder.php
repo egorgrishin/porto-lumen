@@ -2,11 +2,11 @@
 
 namespace Core\Data\Seeders;
 
-use Illuminate\Database\Seeder;
+use Core\Parents\BaseSeeder;
 use Sections\User\Admin\Data\Seeders\AdminSeeder;
 use Sections\User\Role\Data\Seeders\RoleSeeder;
 
-class DatabaseSeeder extends Seeder
+class DatabaseSeeder extends BaseSeeder
 {
     /**
      * Run the database seeds.
