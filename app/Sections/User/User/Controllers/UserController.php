@@ -13,6 +13,7 @@ use Sections\User\User\Requests\CreateUserRequest;
 use Sections\User\User\Requests\DeleteUserRequest;
 use Sections\User\User\Requests\UpdateUserRequest;
 use Sections\User\User\Resources\UserResource;
+use Throwable;
 
 class UserController extends BaseController
 {
@@ -41,6 +42,8 @@ class UserController extends BaseController
 
     /**
      * Remove the specified resource from storage.
+     * @throws ModelNotFoundException<User>
+     * @throws Throwable
      */
     public function delete(DeleteUserRequest $request): JsonResponse
     {
