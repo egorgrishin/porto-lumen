@@ -36,31 +36,32 @@ class Kernel extends ConsoleKernel
      * The Artisan commands provided by your application
      */
     protected $commands = [
-        MakeMiddlewareCommand::class,
-        MakeDtoCommand::class,
-        MakeFactoryCommand::class,
-        SeedCommand::class,
-        MakeSeederCommand::class,
-        MakeMigrationCommand::class,
-        MakeTaskCommand::class,
-        MakeSubActionCommand::class,
         MakeActionCommand::class,
+        MakeCastCommand::class,
         MakeConsoleCommand::class,
         MakeControllerCommand::class,
+        MakeDtoCommand::class,
         MakeEventCommand::class,
         MakeExceptionCommand::class,
+        MakeFactoryCommand::class,
         MakeJobCommand::class,
         MakeListenerCommand::class,
+        MakeMiddlewareCommand::class,
+        MakeMigrationCommand::class,
         MakeModelCommand::class,
         MakeObserverCommand::class,
         MakeProviderCommand::class,
         MakeRequestCommand::class,
         MakeResourceCommand::class,
-        MakeRuleCommand::class,
-        MakeTestCommand::class,
-        MakeCastCommand::class,
         MakeRouteCommand::class,
+        MakeRuleCommand::class,
         MakeScopeCommand::class,
+        MakeSeederCommand::class,
+        MakeSubActionCommand::class,
+        MakeTaskCommand::class,
+        MakeTestCommand::class,
+
+        SeedCommand::class,
     ];
 
     /**
