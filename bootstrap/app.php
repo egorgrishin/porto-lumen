@@ -4,6 +4,7 @@ use Core\Classes\Illuminate\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
 use Core\Providers\AppServiceProvider;
+use Core\Providers\AuthServiceProvider;
 use Core\Providers\DatabaseServiceProvider;
 use Core\Providers\RequestServiceProvider;
 use Core\Providers\RouteServiceProvider;
@@ -33,7 +34,7 @@ date_default_timezone_set(env('APP_TIMEZONE', 'UTC'));
 $app = new Application(dirname(__DIR__));
 
 //$app->withFacades();
-//$app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -93,10 +94,10 @@ $app->configure('app');
 */
 
 $app->register(AppServiceProvider::class);
+$app->register(AuthServiceProvider::class);
 $app->register(DatabaseServiceProvider::class);
 $app->register(RequestServiceProvider::class);
 $app->register(RouteServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
 return $app;
