@@ -24,7 +24,7 @@ class RouteServiceProvider extends BaseServiceProvider
         $paths = glob(__DIR__ . '/../../Sections/*/*/Routes/*.php');
 
         foreach ($paths as $path) {
-            $router->group([], fn (Router $router) => require realpath($path));
+            $router->group(['prefix' => 'api'], fn (Router $router) => require realpath($path));
         }
     }
 }
