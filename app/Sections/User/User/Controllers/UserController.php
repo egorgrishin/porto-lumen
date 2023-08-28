@@ -3,10 +3,12 @@
 namespace Sections\User\User\Controllers;
 
 use Core\Parents\BaseController;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\JsonResponse;
 use Sections\User\User\Actions\CreateUserAction;
+use Sections\User\User\Actions\DeleteUserAction;
 use Sections\User\User\Actions\UpdateUserAction;
-use Sections\User\User\Exceptions\UserNotFoundException;
+use Sections\User\User\Models\User;
 use Sections\User\User\Requests\CreateUserRequest;
 use Sections\User\User\Requests\DeleteUserRequest;
 use Sections\User\User\Requests\UpdateUserRequest;
@@ -27,7 +29,7 @@ class UserController extends BaseController
 
     /**
      * Update the specified resource in storage.
-     * @throws UserNotFoundException
+     * @throws ModelNotFoundException<User>
      */
     public function update(UpdateUserRequest $request): UserResource
     {
@@ -42,6 +44,9 @@ class UserController extends BaseController
      */
     public function delete(DeleteUserRequest $request): JsonResponse
     {
-        //
+        $this->action(DeleteUserAction::class)->run(
+            $request->route('id')
+        );
+        return response()->json();
     }
 }

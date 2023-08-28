@@ -3,32 +3,23 @@
 namespace Sections\User\User\Actions;
 
 use Core\Parents\BaseAction;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
 use Sections\User\User\Dto\UpdateUserDto;
-use Sections\User\User\Exceptions\UserNotFoundException;
 use Sections\User\User\Models\User;
+use Sections\User\User\Tasks\UserFindOrFailTask;
 
 class UpdateUserAction extends BaseAction
 {
     /**
      * Updates the user
-     * @throws UserNotFoundException
+     * @throws ModelNotFoundException<User>
      */
     public function run(UpdateUserDto $dto): User
     {
-        if (!$user = $this->findUser($dto->id)) {
-            throw new UserNotFoundException($dto->id);
-        }
-
-        return $this->update($user, $dto);
-    }
-
-    /**
-     * Returns the user by ID
-     */
-    private function findUser(int $user_id): ?User
-    {
-        return User::query()->find($user_id);
+        return $this->update(
+            $this->task(UserFindOrFailTask::class)->run($dto->id), $dto
+        );
     }
 
     /**

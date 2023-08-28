@@ -14,14 +14,4 @@ class DeleteUserRequest extends BaseRequest
         $user = $this->user();
         return $user && ($user->isAdmin() || $user->id == $this->route('id'));
     }
-
-    /**
-     * Get the validation rules that apply to the request.
-     */
-    public function rules(): array
-    {
-        return [
-            //
-        ];
-    }
 }
