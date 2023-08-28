@@ -153,10 +153,15 @@ abstract class GeneratorCommand extends BaseCommand implements PromptsForMissing
      */
     protected function getSectionAndModuleNames(): array
     {
-        return [
-            $this->ask('Section name:'),
-            $this->ask('Module name:'),
-        ];
+        do {
+            $section = $this->ask('Section name');
+        } while (!$section);
+
+        do {
+            $module = $this->ask('Module name');
+        } while (!$module);
+
+        return [$section, $module];
     }
 
     /**
