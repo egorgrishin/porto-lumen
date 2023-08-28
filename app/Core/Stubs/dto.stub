@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ namespace }};
+
+use Core\Classes\Dto\Concerns\Constructable;
+use Core\Parents\BaseDto;
+
+readonly class {{ class }} extends BaseDto
+{
+    use Constructable;
+}
