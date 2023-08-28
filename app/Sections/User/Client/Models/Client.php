@@ -10,6 +10,15 @@ use Sections\User\User\Models\User;
 class Client extends User
 {
     /**
+     * Defines the available fields to get through the request
+     */
+    public const OPEN_FIELDS = [
+        'id',
+        'name',
+        'email',
+    ];
+
+    /**
      * The table associated with the model.
      */
     protected $table = 'users';
