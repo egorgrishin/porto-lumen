@@ -43,7 +43,7 @@ class Handler extends ExceptionHandler
         $response = parent::render($request, $e);
         return response()->json([
             'error' => [
-                'message' => $e->getMessage(),
+                'message' => env('APP_DEBUG', false) ? $e->getMessage() : 'Server error',
             ],
         ], $response->getStatusCode());
     }
