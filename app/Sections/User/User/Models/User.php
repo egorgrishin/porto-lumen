@@ -47,7 +47,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     public function role(): BelongsTo
     {
-        return $this->belongsTo(Role::class, 'role', 'type');
+        return $this->belongsTo(Role::class, 'role_type', 'type');
     }
 
     /**
@@ -55,14 +55,6 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      */
     public function isAdmin(): bool
     {
-        return $this->role == Role::ADMIN;
-    }
-
-    /**
-     * Determines whether the user is a client
-     */
-    public function isClient(): bool
-    {
-        return $this->role == Role::CLIENT;
+        return $this->role_type == Role::ADMIN;
     }
 }

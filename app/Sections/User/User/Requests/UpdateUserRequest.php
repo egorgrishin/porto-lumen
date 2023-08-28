@@ -27,15 +27,15 @@ class UpdateUserRequest extends BaseRequest
         $user = new User();
         $role = Role::class;
         return [
-            'name'     => 'nullable|string|max:255',
-            'email' => [
+            'name'      => 'nullable|string|max:255',
+            'email'     => [
                 'nullable',
                 'email',
                 'max:255',
                 Rule::unique($user->getTable())->ignore($this->route('id')),
             ],
-            'role'     => "nullable|string|exists:$role,type|max:30",
-            'password' => "nullable|string",
+            'role_type' => "nullable|string|exists:$role,type|max:30",
+            'password'  => "nullable|string",
         ];
     }
 

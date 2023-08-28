@@ -16,12 +16,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('role', 30)->nullable()->index();
+            $table->string('role_type', 30)->nullable()->index();
             $table->string('password');
             $table->timestamps();
             $table->softDeletes()->index();
 
-            $table->foreign('role')
+            $table->foreign('role_type')
                 ->on('roles')
                 ->references('type')
                 ->cascadeOnUpdate()

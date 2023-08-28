@@ -22,7 +22,7 @@ class UserResource extends BaseResource
             'id'         => $user->id,
             'name'       => $user->name,
             'email'      => $user->email,
-            'role'       => $user->role,
+            'role_type'  => $user->role_type,
             'created_at' => $user->created_at,
             'updated_at' => $user->updated_at,
             'deleted_at' => $user->deleted_at,

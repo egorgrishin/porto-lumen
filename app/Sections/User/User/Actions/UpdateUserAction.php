@@ -35,8 +35,8 @@ class UpdateUserAction extends BaseAction
         if ($dto->email) {
             $user->email = $dto->email;
         }
-        if ($dto->role) {
-            $user->role = $dto->role;
+        if ($dto->role_type) {
+            $user->role_type = $dto->role_type;
         }
         if ($dto->password) {
             $user->password = $dto->password;

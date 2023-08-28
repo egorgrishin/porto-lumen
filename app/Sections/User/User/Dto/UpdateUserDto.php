@@ -13,7 +13,7 @@ readonly class UpdateUserDto extends BaseDto
     public int     $id;
     public ?string $name;
     public ?string $email;
-    public ?string $role;
+    public ?string $role_type;
     public ?string $password;
 
     public static function fromRequest(UpdateUserRequest $request): self

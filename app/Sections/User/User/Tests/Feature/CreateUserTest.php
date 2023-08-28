@@ -15,10 +15,10 @@ class CreateUserTest extends BaseTest
 
         $this->actingAs($admin)
             ->post('/api/v1/users', [
-                'name'     => $name,
-                'email'    => $email,
-                'role'     => 'admin',
-                'password' => 'Password',
+                'name'      => $name,
+                'email'     => $email,
+                'role_type' => 'admin',
+                'password'  => 'Password',
             ])
             ->seeStatusCode(201)
             ->seeJsonStructure([
@@ -26,7 +26,7 @@ class CreateUserTest extends BaseTest
                     'id',
                     'name',
                     'email',
-                    'role',
+                    'role_type',
                     'created_at',
                     'updated_at',
                     'deleted_at',

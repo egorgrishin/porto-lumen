@@ -26,7 +26,7 @@ class UpdateUserTest extends BaseTest
                     'id',
                     'name',
                     'email',
-                    'role',
+                    'role_type',
                     'created_at',
                     'updated_at',
                     'deleted_at',

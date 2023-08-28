@@ -25,10 +25,10 @@ class CreateUserRequest extends BaseRequest
         $user = User::class;
         $role = Role::class;
         return [
-            'name'     => 'required|string|max:255',
-            'email'    => "required|email|unique:$user|max:255",
-            'role'     => "required|string|exists:$role,type|max:30",
-            'password' => "required|string",
+            'name'      => 'required|string|max:255',
+            'email'     => "required|email|unique:$user|max:255",
+            'role_type' => "required|string|exists:$role,type|max:30",
+            'password'  => "required|string",
         ];
     }
 

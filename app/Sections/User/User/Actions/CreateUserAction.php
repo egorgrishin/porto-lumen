@@ -18,7 +18,7 @@ class CreateUserAction extends BaseAction
         $user = new User();
         $user->name = $dto->name;
         $user->email = $dto->email;
-        $user->role = $dto->role;
+        $user->role_type = $dto->role_type;
         $user->password = $dto->password;
         $user->saveOrFail();
         return $user;

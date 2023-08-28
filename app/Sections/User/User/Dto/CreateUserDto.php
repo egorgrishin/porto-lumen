@@ -12,7 +12,7 @@ readonly class CreateUserDto extends BaseDto
 
     public string $name;
     public string $email;
-    public string $role;
+    public string $role_type;
     public string $password;
 
     public static function fromRequest(CreateUserRequest $request): self
