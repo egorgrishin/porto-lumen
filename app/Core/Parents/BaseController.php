@@ -2,6 +2,9 @@
 
 namespace Core\Parents;
 
+use Core\Classes\Illuminate\Application;
+use Illuminate\Contracts\Container\BindingResolutionException;
+
 abstract class BaseController
 {
     /**
@@ -9,6 +12,12 @@ abstract class BaseController
      */
     public function action(string $abstract): BaseAction
     {
-        return new $abstract;
+        try {
+            return new $abstract(
+                ...Application::getInstance()->getResolvedDependencies($abstract)
+            );
+        } catch (BindingResolutionException) {
+            return new $abstract;
+        }
     }
 }
