@@ -3,6 +3,7 @@
 use Core\Classes\Illuminate\Application;
 use Core\Exceptions\Handler;
 use Core\Kernels\Kernel;
+use Core\Middleware\FieldsAsArray;
 use Core\Providers\AppServiceProvider;
 use Core\Providers\AuthServiceProvider;
 use Core\Providers\DatabaseServiceProvider;
@@ -74,9 +75,9 @@ $app->configure('app');
 |
 */
 
-// $app->middleware([
-//     App\Http\Middleware\ExampleMiddleware::class
-// ]);
+$app->middleware([
+    FieldsAsArray::class,
+]);
 
 // $app->routeMiddleware([
 //     'auth' => App\Http\Middleware\Authenticate::class,
