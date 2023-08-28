@@ -9,17 +9,11 @@ use Illuminate\Http\Request;
 class Authenticate
 {
     /**
-     * The authentication guard factory instance.
-     */
-    protected Auth $auth;
-
-    /**
      * Create a new middleware instance.
      */
-    public function __construct(Auth $auth)
-    {
-        $this->auth = $auth;
-    }
+    public function __construct(
+        protected Auth $auth,
+    ) {}
 
     /**
      * Handle an incoming request.
