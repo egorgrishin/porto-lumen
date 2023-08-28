@@ -33,7 +33,7 @@ date_default_timezone_set(env('APP_TIMEZONE', 'UTC'));
 
 $app = new Application(dirname(__DIR__));
 
-//$app->withFacades();
+$app->withFacades();
 $app->withEloquent();
 
 /*

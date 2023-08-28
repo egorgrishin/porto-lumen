@@ -19,6 +19,7 @@ class UserController extends BaseController
 {
     /**
      * Store a newly created resource in storage.
+     * @throws Throwable
      */
     public function create(CreateUserRequest $request): UserResource
     {
@@ -31,6 +32,7 @@ class UserController extends BaseController
     /**
      * Update the specified resource in storage.
      * @throws ModelNotFoundException<User>
+     * @throws Throwable
      */
     public function update(UpdateUserRequest $request): UserResource
     {
