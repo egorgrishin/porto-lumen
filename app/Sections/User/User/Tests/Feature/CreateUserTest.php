@@ -3,7 +3,6 @@
 namespace Sections\User\User\Tests\Feature;
 
 use Core\Parents\BaseTest;
-use Illuminate\Support\Facades\DB;
 use Sections\User\Admin\Models\Admin;
 
 class CreateUserTest extends BaseTest

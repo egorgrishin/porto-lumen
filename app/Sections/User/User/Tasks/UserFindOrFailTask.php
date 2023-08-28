@@ -14,6 +14,7 @@ class UserFindOrFailTask extends BaseTask
      */
     public function run(int $user_id): User
     {
+        /** @var User */
         return User::query()->findOrFail($user_id);
     }
 }
