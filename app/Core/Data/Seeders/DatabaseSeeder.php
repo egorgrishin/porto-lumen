@@ -3,6 +3,8 @@
 namespace Core\Data\Seeders;
 
 use Illuminate\Database\Seeder;
+use Sections\User\Admin\Data\Seeders\AdminSeeder;
+use Sections\User\Role\Data\Seeders\RoleSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $this->call([
+            RoleSeeder::class,
+            AdminSeeder::class,
+        ]);
     }
 }
