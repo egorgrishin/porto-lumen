@@ -100,4 +100,12 @@ class Application extends LumenApplication
         array_pop($this->buildStack);
         return $instances;
     }
+
+    /**
+     * Get the path to the database directory.
+     */
+    public function databasePath($path = ''): string
+    {
+        return $this->corePath('Data' . ($path ? DIRECTORY_SEPARATOR.$path : $path));
+    }
 }

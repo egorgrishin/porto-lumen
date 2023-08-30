@@ -26,6 +26,7 @@ use Core\Commands\MakeRuleCommand;
 use Core\Commands\MakeScopeCommand;
 use Core\Commands\MakeTaskCommand;
 use Core\Commands\MakeTestCommand;
+use Core\Commands\MigrationTableCommand;
 use Core\Commands\SeedCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -61,6 +62,7 @@ class Kernel extends ConsoleKernel
         MakeTaskCommand::class,
         MakeTestCommand::class,
 
+        MigrationTableCommand::class,
         SeedCommand::class,
     ];
 
