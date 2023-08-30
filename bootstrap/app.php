@@ -7,6 +7,7 @@ use Core\Middleware\FieldsAsArray;
 use Core\Providers\AppServiceProvider;
 use Core\Providers\AuthServiceProvider;
 use Core\Providers\DatabaseServiceProvider;
+use Core\Providers\EventServiceProvider;
 use Core\Providers\RequestServiceProvider;
 use Core\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Console\Kernel as LumenKernel;
@@ -79,10 +80,6 @@ $app->middleware([
     FieldsAsArray::class,
 ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
-
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers
@@ -99,6 +96,6 @@ $app->register(AuthServiceProvider::class);
 $app->register(DatabaseServiceProvider::class);
 $app->register(RequestServiceProvider::class);
 $app->register(RouteServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->register(EventServiceProvider::class);
 
 return $app;
